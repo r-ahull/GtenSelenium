@@ -10,14 +10,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FindElements {
 
 	public static void main(String[] args) {
-		
+
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
 		WebElement userName=driver.findElement(By.id("user-name"));
 		userName.sendKeys("standard_user");
 		driver.findElement(By.name("password")).sendKeys("secret_sauce");
-		WebElement loginBtn= driver.findElement(By.className("submit-button"));
+		 WebElement loginBtn=driver.findElement(By.className("submit-button"));
 		loginBtn.click();
 	 
 		//findelements returns list of webelements
